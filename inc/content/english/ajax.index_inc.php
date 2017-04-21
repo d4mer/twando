@@ -19,7 +19,7 @@ http://www.twando.com/
  }
 }
 ?>
-<table class="data_table">
+<table class="table table-striped table-bordered table-hover table-condensed">
  <tr>
   <td class="heading">ID</td>
   <td class="heading">Screen Name</td>
