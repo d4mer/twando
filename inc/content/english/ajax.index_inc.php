@@ -27,8 +27,8 @@ http://www.twando.com/
   <td class="heading">Following</td>
   <td class="heading">Followers</td>
   <td class="heading" colspan="3" style="text-align: center;">Settings &amp; Options</td>
-  <td class="heading"><img src="inc/images/refresh_icon.gif" width="16" height="16" /></td>
-  <td class="heading"><img src="inc/images/delete_icon.gif" width="14" height="15" /></td>
+  <td class="heading"><i class="fa fa-refresh" style="font-size:16px;"></i></td>
+  <td class="heading"><i class="fa fa-trash" style="font-size:16px;"></i></td>
  </tr>
 <?php
 $row_count = 0;
@@ -44,8 +44,8 @@ while ($q1a = $db->fetch_array($q1)) {
   <td><a href="follow_settings.php?id=<?=$q1a['id']?>">Follows</a></td>
   <td><a href="tweet_settings.php?id=<?=$q1a['id']?>">Tweets</a></td>
   <td><a href="log_settings.php?id=<?=$q1a['id']?>">Logs</a></td>
-  <td><a href="javascript:ajax_index_update('refresh','<?=$q1a['id']?>');"><img src="inc/images/refresh_icon.gif" width="16" height="16" alt="Click to refresh user details for this Twitter id" title="Click to refresh user details for this Twitter id" /></a></td>
-  <td><a href="javascript:ajax_index_update('delete','<?=$q1a['id']?>');" onclick="javascript:if(confirm('Are you sure you want to remove this account? All your Twando options and settings for this Twitter account will be lost.')) return (true); else return (false)"><img src="inc/images/delete_icon.gif" width="14" height="15" alt="Click to delete this account from your Twando application" title="Click to delete this account from your Twando application" /></a></td>
+  <td><a href="javascript:ajax_index_update('refresh','<?=$q1a['id']?>');"><i class="fa fa-refresh" style="font-size:16px;" title="Click to refresh user details for this Twitter"></i></a></td>
+  <td><a href="javascript:ajax_index_update('delete','<?=$q1a['id']?>');" onclick="javascript:if(confirm('Are you sure you want to remove this account? All your Twando options and settings for this Twitter account will be lost.')) return (true); else return (false)"><i class="fa fa-trash" style="font-size:16px;" title="Click to delete this account from your Twando application"></i></a></td>
  </tr>
 <?php
  $row_count ++;
