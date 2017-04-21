@@ -44,17 +44,17 @@ Consumer Secret:<br />
 } else {
 ?>
 <h2>Application Details</h2>
-Your application has been registered with a consumer key and a consumer secret. If you would like to update
-these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update_div').toggle();">click here</a>.
-<div id="cred_update_div" style="display: none;">
-<form method="post" action="<?=BASE_LINK_URL?>">
-Consumer Key:<br />
-<input type="text" name="consumer_key" size="20" class="input_box_style" value="<?=$ap_creds['consumer_key']?>" style="width: 350px;" />
+<p class="alert alert-success">Your application has been registered with a consumer key and a consumer secret. If you would like to update
+these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update_div').toggle();">click here</a>.</p>
+<div id="cred_update_div" class="form-group" style="display: none;">
+<form method="post" class="form-horizontal" action="<?=BASE_LINK_URL?>">
+    <label>Consumer Key:</label><br />
+<input type="text" name="consumer_key" size="20" class="form-control" value="<?=$ap_creds['consumer_key']?>"  />
 <br />
-Consumer Secret:<br />
-<input type="text" name="consumer_secret" size="20" class="input_box_style" value="<?=$ap_creds['consumer_secret']?>" style="width: 350px;"  />
+<label>Consumer Secret:</label><br />
+<input type="text" name="consumer_secret" size="20" class="form-control" value="<?=$ap_creds['consumer_secret']?>"   />
 <br />
-<input type="submit" value="Save Values!" name="login" id="login" class="submit_button_style" />
+<input type="submit" value="Save Values!" name="login" id="login" class="btn btn-default" />
 <input type="hidden" name="a" value="savekeys2" />
 </form>
 </div>
