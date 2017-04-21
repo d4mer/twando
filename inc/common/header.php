@@ -50,17 +50,20 @@ $(document).ready(function() {
 
 <!-- Centre main -->
 <div class="container-fluid">
-    <div class="col-md-3 sidenav hidden-xs">
-        <a href="<?=BASE_LINK_URL?>"><img src="inc/images/logo.gif" width="407" height="65" alt="Twando" /></a>
-        <!--<h2>Logo</h2>-->
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Accounts</a></li>
-        <li><a href="/multi_account_functions.php">Multi-Account Functions</a></li>
-        <li><a href="/cron_instructions.php">Cron Job Instructions</a></li>
-      </ul>
-    </div>
-    <div  class="col-md-9">
-        <div id="centre_main" class="well">
-        </div>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 sidenav hidden-xs">
+                <a href="<?=BASE_LINK_URL?>"><img src="inc/images/logo.gif" width="407" height="65" alt="Twando" /></a>
+                <!--<h2>Logo</h2>-->
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="http://twando:9001/">Dashboard</a></li>
+                <li><a href="#section2">Accounts</a></li>
+                <li><a href="/multi_account_functions.php">Multi-Account Functions</a></li>
+                <li><a href="/cron_instructions.php">Cron Job Instructions</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-9">
+
+
+
