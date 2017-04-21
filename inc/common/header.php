@@ -49,7 +49,7 @@ $(document).ready(function() {
 </div>
 
 <!-- Centre main -->
-<div id="centre_main" class="container-fluid">
+<div class="container-fluid">
     <div class="col-md-3 sidenav hidden-xs">
         <a href="<?=BASE_LINK_URL?>"><img src="inc/images/logo.gif" width="407" height="65" alt="Twando" /></a>
         <!--<h2>Logo</h2>-->
@@ -59,5 +59,8 @@ $(document).ready(function() {
         <li><a href="/multi_account_functions.php">Multi-Account Functions</a></li>
         <li><a href="/cron_instructions.php">Cron Job Instructions</a></li>
       </ul>
-
+    </div>
+    <div  class="col-md-9">
+        <div id="centre_main" class="well">
+        </div>
     </div>
