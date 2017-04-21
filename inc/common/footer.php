@@ -1,5 +1,6 @@
-
+        </div>
 <!-- End of centre main -->
+    </div>
 </div>
 
 <div id="footer" class="container-fluid text-center">
