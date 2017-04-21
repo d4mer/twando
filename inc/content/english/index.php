@@ -43,6 +43,7 @@ Before you can start using Twando, you must first register your application with
 <?php
 } else {
 ?>
+
 <h2>Application Details</h2>
 <p class="alert alert-success">Your application has been registered with a consumer key and a consumer secret. If you would like to update
 these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update_div').toggle();">click here</a>.</p>
@@ -58,18 +59,30 @@ these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update
 <input type="hidden" name="a" value="savekeys2" />
 </form>
 </div>
-<h2>Authorized Twitter Accounts</h2>
-<?php
- if ($response_msg) {
-  echo '<div id="index_resp_msg">' . $response_msg . '</div>';
- }
-?>
-<div id="twitter_user_table">
- &nbsp;
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Authorized Twitter Accounts</h2>
+    </div>
+    <?php
+     if ($response_msg) {
+      echo '<div id="index_resp_msg">' . $response_msg . '</div>';
+     }
+    ?>
+    <div id="twitter_user_table" class="panel-body">
+     &nbsp;
+    </div>
 </div>
-To authorize another account, make sure you are either signed out of all accounts or signed into the account you want to authorize on <a href="https://twitter.com/" target="_blank">Twitter</a> before clicking the button below.
-<br />
-<a href="redirect.php"><img src="inc/images/sign-in-with-twitter-button.png" style="margin: 5px 0px 0px 0px" alt="Sign in with Twitter" width="492" height="108" /></a>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Account Authorizations</h2>
+    </div>
+    <div class="panel-body">
+        <p class="alert alert-success">To authorize another account, make sure you are either signed out of all accounts or signed into the account you want to authorize on <a href="https://twitter.com/" target="_blank">Twitter</a> before clicking the button below.</p>
+    </div>
+
+    <a href="redirect.php"><input type="submit" value="Sign in With Twitter" class="btn btn-primary btn-lg btn-block" /></a>
+    <br />
+</div>
 <!--<h2>Further Options</h2>
 <a href="multi_account_functions.php">Multi account functions</a><br />  
 <a href="cron_instructions.php">Cron job instructions</a><br />-->
