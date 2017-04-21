@@ -38,7 +38,7 @@ while ($q1a = $db->fetch_array($q1)) {
  <tr>
   <td><?=$q1a['id']?></td>
   <td><a href="https://twitter.com/<?=$q1a['screen_name']?>" target="_blank"><?=htmlentities($q1a['screen_name'])?></a></td>
-  <td><?php if ($q1a['profile_image_url']) { ?><img src="<?=$q1a['profile_image_url']?>" /><?php } ?></td>
+  <td><?php if ($q1a['profile_image_url']) { ?><img src="<?=$q1a['profile_image_url']?>" class="img-rounded center-block" /><?php } ?></td>
   <td><?=$q1a['friends_count']?></td>
   <td><?=$q1a['followers_count']?></td>
   <td><a href="follow_settings.php?id=<?=$q1a['id']?>">Follows</a></td>
