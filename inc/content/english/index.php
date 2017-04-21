@@ -80,8 +80,8 @@ these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update
         <p class="alert alert-success">To authorize another account, make sure you are either signed out of all accounts or signed into the account you want to authorize on <a href="https://twitter.com/" target="_blank">Twitter</a> before clicking the button below.</p>
     </div>
 
-    <a href="redirect.php"><input type="submit" value="Sign in With Twitter" class="btn btn-primary btn-lg btn-block" /></a>
-    <br />
+    <a href="redirect.php"><button type="submit" value="Sign in With Twitter" class="btn btn-primary btn-lg btn-block" ><i class="fa fa-twitter-square" style="font-size:24px;" aria-hidden="true"></i> Sign in With Twitter</button></a>
+
 </div>
 <!--<h2>Further Options</h2>
 <a href="multi_account_functions.php">Multi account functions</a><br />  
