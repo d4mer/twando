@@ -30,14 +30,14 @@ Before you can start using Twando, you must first register your application with
  <li>You will then be given a consumer key and consumer secret (<a href="inc/images/reg_ap2.jpg" target="_blank">example</a>). Enter these in the boxes below to complete the setup of your Twitter app.</li>
  <li>You must also make sure your application is set with <b>read/write access</b> on the settings page; <a href="inc/images/reg_ap3.jpg" target="_blank">click here to view</a>.</li>
 </ol>
-<form method="post" action="<?=BASE_LINK_URL?>">
-Consumer Key:<br />
-<input type="text" name="consumer_key" size="20" class="input_box_style" value="<?=$_POST['consumer_key']?>" style="width: 350px;" />
+<form method="post" class="form-horizontal" action="<?=BASE_LINK_URL?>">
+<label>Consumer Key:</label><br />
+<input type="text" name="consumer_key" size="20" class="form-control" value="<?=$_POST['consumer_key']?>" style="width: 350px;" />
 <br />
-Consumer Secret:<br />
-<input type="text" name="consumer_secret" size="20" class="input_box_style" value="<?=$_POST['consumer_secret']?>" style="width: 350px;"  />
+<label>Consumer Secret:</label><br />
+<input type="text" name="consumer_secret" size="20" class="form-contrl" value="<?=$_POST['consumer_secret']?>" style="width: 350px;"  />
 <br />
-<input type="submit" value="Save Values!" name="login" id="login" class="submit_button_style" />
+<input type="submit" value="Save Values!" name="login" id="login" class="btn btn-default" />
 <input type="hidden" name="a" value="savekeys2" />
 </form>
 <?php
@@ -48,7 +48,7 @@ Consumer Secret:<br />
 these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update_div').toggle();">click here</a>.</p>
 <div id="cred_update_div" class="form-group" style="display: none;">
 <form method="post" class="form-horizontal" action="<?=BASE_LINK_URL?>">
-    <label>Consumer Key:</label><br />
+<label>Consumer Key:</label><br />
 <input type="text" name="consumer_key" size="20" class="form-control" value="<?=$ap_creds['consumer_key']?>"  />
 <br />
 <label>Consumer Secret:</label><br />
@@ -70,9 +70,9 @@ these credentials, please <a href="javascript:void(0);" onclick="$('#cred_update
 To authorize another account, make sure you are either signed out of all accounts or signed into the account you want to authorize on <a href="https://twitter.com/" target="_blank">Twitter</a> before clicking the button below.
 <br />
 <a href="redirect.php"><img src="inc/images/sign-in-with-twitter-button.png" style="margin: 5px 0px 0px 0px" alt="Sign in with Twitter" width="492" height="108" /></a>
-<h2>Further Options</h2>
+<!--<h2>Further Options</h2>
 <a href="multi_account_functions.php">Multi account functions</a><br />  
-<a href="cron_instructions.php">Cron job instructions</a><br />
+<a href="cron_instructions.php">Cron job instructions</a><br />-->
 <?php
 //End of application registered
 }
