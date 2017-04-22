@@ -13,6 +13,8 @@ global $header_info;
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+
 <!-- Scripts -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="inc/scripts/ajax_scripts.js"></script>
@@ -79,7 +81,7 @@ $(document).ready(function() {
     <div class="container">
         <div class="row">
             <div class="col-md-3 sidenav hidden-xs">
-                <a href="<?=BASE_LINK_URL?>"><h2><strong>TWANDO</strong></h2></a>
+                <!--<a href="<?=BASE_LINK_URL?>"></a>--><h2><strong>TWANDO</strong></h2>
                 <!--<h2>Logo</h2>-->
               <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="http://twando:9001/">Dashboard</a></li>
