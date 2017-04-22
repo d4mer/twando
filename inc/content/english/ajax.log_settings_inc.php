@@ -10,20 +10,32 @@ http://www.twando.com/
   switch ($_REQUEST['tab_id']) {
     case 'tab1':
 ?>
-<h2>Log Settings</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Log Settings</h2>
+    </div>
 <?=$response_msg?>
 <?php
 if ($q1a['profile_image_url']) {
 ?>
-<img src="<?=$q1a['profile_image_url']?>" style="float: right;" alt="<?=htmlentities($q1a['screen_name'])?>" title="<?=htmlentities($q1a['screen_name'])?>" />
+<img src="<?=$q1a['profile_image_url']?>" style="float: right;" alt="<?=htmlentities($q1a['screen_name'])?>" title="<?=htmlentities($q1a['screen_name'])?>" class="img-rounded" />
 <?php
 }
 ?>
-<form method="post" action="" name="settings_form" id="settings_form" onsubmit="ajax_log_settings_update('tab1','settings_form'); return false;">
-<input <?php if ($q1a['log_data']) { echo 'checked="checked"'; } ?> type="checkbox" name="log_data" id="log_data" value="1" /> Log actions from cron jobs?<br />
-<input type="hidden" name="a" value="saveop" />
+
+<form method="post" class="form-horizontal" action="" name="settings_form" id="settings_form" onsubmit="ajax_log_settings_update('tab1','settings_form'); return false;">
+        <div class="form-group">
+            <label class="col-md-3 control-label">Log actions from cron jobs?</label>
+            <div class="col-md-6">
+                <div class="radio">
+                    <input <?php if ($q1a['log_data']) { echo 'checked="checked"'; } ?> type="checkbox" name="log_data" id="log_data" value="1" class="styled"/>
+                    <input type="hidden" name="a" value="saveop" />
+                </div>
+            </div>
+        </div>
 </form>
-<input type="submit" value="Save Options" class="submit_button_style" onclick="ajax_log_settings_update('tab1','settings_form');" />
+
+<input type="submit" value="Save Options" class="btn btn-primary" onclick="ajax_log_settings_update('tab1','settings_form');" />
 <?php
       break;
     case 'tab2':
@@ -40,6 +52,8 @@ if ($q1a['profile_image_url']) {
     }
 
 ?>
+
+</div>
 <h2>View <?=$tab_vars['h2']?> Logs</h2>
 <table class="data_table">
  <tr>
@@ -115,6 +129,7 @@ if ($total_pages > 1) {
  <td colspan="3" style="text-align: center">No cron logs found</td>
 </tr>
 </table>
+
 <?php
 //End of 0 total items
 }
