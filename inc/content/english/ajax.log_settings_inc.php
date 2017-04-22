@@ -12,30 +12,31 @@ http://www.twando.com/
 ?>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h2>Log Settings</h2>
+        <h2>What Should We Do For: <?=htmlentities($q1a['screen_name'])?>
+            <?php
+          if ($q1a['profile_image_url']) {
+            ?>
+            <img src="<?=$q1a['profile_image_url']?>" style="float: right;" alt="<?=htmlentities($q1a['screen_name'])?>" title="<?=htmlentities($q1a['screen_name'])?>" class="img-rounded" />
+            <?php
+                                         }
+            ?>
+        </h2>
     </div>
 <?=$response_msg?>
-<?php
-if ($q1a['profile_image_url']) {
-?>
-<img src="<?=$q1a['profile_image_url']?>" style="float: right;" alt="<?=htmlentities($q1a['screen_name'])?>" title="<?=htmlentities($q1a['screen_name'])?>" class="img-rounded" />
-<?php
-}
-?>
 
 <form method="post" class="form-horizontal" action="" name="settings_form" id="settings_form" onsubmit="ajax_log_settings_update('tab1','settings_form'); return false;">
         <div class="form-group">
-            <label class="col-md-3 control-label">Log actions from cron jobs?</label>
+            <br/><label class="col-md-3 control-label">Log actions from cron jobs?</label>
             <div class="col-md-6">
                 <div class="radio">
                     <input <?php if ($q1a['log_data']) { echo 'checked="checked"'; } ?> type="checkbox" name="log_data" id="log_data" value="1" class="styled"/>
                     <input type="hidden" name="a" value="saveop" />
                 </div>
             </div>
+            <input type="submit" value="Save Options" class="btn btn-primary" onclick="ajax_log_settings_update('tab1','settings_form');" />
         </div>
 </form>
 
-<input type="submit" value="Save Options" class="btn btn-primary" onclick="ajax_log_settings_update('tab1','settings_form');" />
 <?php
       break;
     case 'tab2':
