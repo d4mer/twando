@@ -16,16 +16,19 @@ if ($q1a['id'] == "")  {
 } else {
 //List all options here
 ?>
-<div class="tab_row">
-<div class="tab_main" id="tab1">
- <a href="javascript:ajax_log_settings_tab('tab1');">Log Settings</a>
-</div><div class="tab_main" id="tab2">
- <a href="javascript:ajax_log_settings_tab('tab2');">View Follow Logs</a>
-</div><div class="tab_main" id="tab3">
- <a href="javascript:ajax_log_settings_tab('tab3');">View Tweet Logs</a>
-</div><div class="tab_main" id="tab4">
- <a href="javascript:ajax_log_settings_tab('tab4');">Purge Log History</a>
-</div>
+<div class="nav nav-tabs">
+    <li class="active" id="tab1">
+        <a data-toggle="tab" href="javascript:ajax_log_settings_tab('tab1');">Log Settings</a>
+    </li>
+    <li data-toggle="tab" class="tab_main" id="tab2">
+        <a href="javascript:ajax_log_settings_tab('tab2');">View Follow Logs</a>
+    </li>
+    <li data-toggle="tab" class="tab_main" id="tab3">
+        <a href="javascript:ajax_log_settings_tab('tab3');">View Tweet Logs</a>
+    </li>
+    <li data-toggle="tab" class="tab_main" id="tab4">
+        <a href="javascript:ajax_log_settings_tab('tab4');">Purge Log History</a>
+    </li>
 </div>
 
 <br style="clear: both;" />
@@ -43,5 +46,5 @@ if ($q1a['id'] == "")  {
 }
 ?>
 <br style="clear: both;" />
-<a href="<?=BASE_LINK_URL?>">Return to main admin screen</a>
+<!--<a href="<?=BASE_LINK_URL?>">Return to main admin screen</a>-->
 
