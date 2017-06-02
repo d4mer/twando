@@ -44,19 +44,19 @@ $page_list_string = "";
 for ($ij = $page - 2; $ij <= $page +2; $ij++) {
 if ( ($ij > 0) and  ($ij <= $total_pages) ) {
 if ($ij == $page) {
-$page_list_string .= "<div class=\"box\">" . $ij . "</div>";
+$page_list_string .= "<li>" . $ij . "</li>";
 }
 else {
-$page_list_string .= "<div class=\"box\"><a href=\"javascript:" . $js_page_func . "('" . $tab_id . "','" . $ij . "');\">" . $ij . "</a></div>";
+$page_list_string .= "<li><a href=\"javascript:" . $js_page_func . "('" . $tab_id . "','" . $ij . "');\">" . $ij . "</a></li>";
 }
 }
 }
 
 if (($page + 2) < $total_pages) {
- $page_list_string .= '<div class="boxw">...</div><div class="box">' . "<a href=\"javascript:" . $js_page_func . "('" . $tab_id . "','" . $total_pages . "');\">" . $total_pages . "</a></div>";
+ $page_list_string .= '<li>...</li><li>' . "<a href=\"javascript:" . $js_page_func . "('" . $tab_id . "','" . $total_pages . "');\">" . $total_pages . "</a></li>";
 }
 if (($page - 2) > 1) {
- $page_list_string = '<div class="box">' . "<a href=\"javascript:" . $js_page_func . "('" . $tab_id . "','1');\">1</a></div>" . '<div class="boxw">...</div>' . $page_list_string;
+ $page_list_string = '<li>' . "<a href=\"javascript:" . $js_page_func . "('" . $tab_id . "','1');\">1</a></li>" . '<li>...</li>' . $page_list_string;
 }
 
 }
