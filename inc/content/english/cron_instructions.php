@@ -17,26 +17,29 @@ any reason you don't have local cron job access, you can also call these files r
 This cron is used to execute the auto follow/unfollow/DM commands. You should run it at a time when you are not using API requests (e.g. during the night). We recommend running the cron once per day, but you can run it more
 frequently if you wish. Even if you don't have auto follow or unfollow enabled, you should still run this cron job as it will record who followed and unfollowed each account.
 <br /><br />
-<div class="cron_row">
- <div class="cron_left">Local Command:</div>
- <div class="cron_right"><input type="text" name="code1" id="code1" class="input_box_style" style="width: 800px;" value="php <?=getcwd()?>/cron_follow.php <?=CRON_KEY?>" /></div>
+<div class="form-group">
+ <label>Local Command:</label>
+ <div><input type="text" name="code1" id="code1" class="alert alert-success" style="width: 800px;" value="php <?=getcwd()?>/cron_follow.php <?=CRON_KEY?>" /></div>
 </div>
-<div class="cron_row">
- <div class="cron_left">Remote URL:</div>
- <div class="cron_right"><input type="text" name="code2" id="code2" class="input_box_style" style="width: 800px;" value="<?=BASE_LINK_URL?>cron_follow.php?cron_key=<?=CRON_KEY?>" /></div>
+<div class="form-group">
+ <label>Remote URL:</label>
+ <div><input type="text" name="code2" id="code2" class="alert alert-success" style="width: 800px;" value="<?=BASE_LINK_URL?>cron_follow.php?cron_key=<?=CRON_KEY?>" /></div>
 </div>
 <br style="clear: both;" />
 <h2>Tweet Cron Job</h2>
 This cron is used to post your scheduled tweets. When the cron file is executed, tweets scheduled for that time or before will be posted to Twitter, so how often you run this cron really depends how often you need to post scheduled tweets. Calling the cron
 every five minutes is probably reasonable. If you never schedule any tweets you don't need to set up this cron.
 <br /><br />
-<div class="cron_row">
- <div class="cron_left">Local Command:</div>
- <div class="cron_right"><input type="text" name="code3" id="code3" class="input_box_style" style="width: 800px;" value="php <?=getcwd()?>/cron_tweet.php <?=CRON_KEY?>" /></div>
+<div class="form-group">
+ <label>Local Command:</label>
+ <div>
+     <input type="text" name="code3" id="code3" class="alert alert-success" style="width: 800px;" value="php <?=getcwd()?>/cron_tweet.php <?=CRON_KEY?>" /></div>
 </div>
-<div class="cron_row">
- <div class="cron_left">Remote URL:</div>
- <div class="cron_right"><input type="text" name="code4" id="code4" class="input_box_style" style="width: 800px;" value="<?=BASE_LINK_URL?>cron_tweet.php?cron_key=<?=CRON_KEY?>" /></div>
+<div class="form-group">
+     <label>Remote URL:</label>
+     <div>
+     <input type="text" name="code4" id="code4" class="alert alert-success" style="width: 800px;" value="<?=BASE_LINK_URL?>cron_tweet.php?cron_key=<?=CRON_KEY?>" />
+    </div>
 </div>
 <br style="clear: both;" />
 <h2>Cron Status</h2>
