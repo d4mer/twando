@@ -9,8 +9,12 @@ http://www.twando.com/
   switch ($_REQUEST['tab_id']) {
     case 'tab1':
 ?>
+<div class="panel panel-default">
+    <div class="panel-heading">
 <h2>Cross Follow Accounts</h2>
 <?=$response_msg?>
+            </div>
+
 <form method="post" action="" name="crossfollow_form" id="crossfollow_form" onsubmit="ajax_multi_account_update('tab1','crossfollow_form'); return false;">
 <select name="cross_op" id="cross_op" class="input_box_style" style="width: 95px;">
  <option value="1" selected="selected">Follow</option>
@@ -19,11 +23,16 @@ http://www.twando.com/
 <input type="hidden" name="a" value="cross_go" />
 </form>
 <input type="submit" value="Cross Follow Accounts" class="submit_button_style" onclick="ajax_multi_account_update('tab1','crossfollow_form');" />
+
+</div>
 <?php
       break;
     case 'tab2':
 ?>
-<h2>All Follow / Unfollow</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>All Follow / Unfollow</h2>
+    </div>
 <?=$response_msg?>
 <form method="post" action="" name="allfollow_form" id="allfollow_form" onsubmit="ajax_multi_account_update('tab2','allfollow_form'); return false;">
 <select name="cross_op" id="cross_op" class="input_box_style" style="width: 95px;">
@@ -37,21 +46,26 @@ http://www.twando.com/
 <input type="hidden" name="a" value="allfollow_go" />
 </form>
 <input type="submit" value="All Follow / Unfollow" class="submit_button_style" onclick="ajax_multi_account_update('tab2','allfollow_form');" />
+</div>
 <?php
    break;
    case 'tab3':
 ?>
-<h2>Multi Tweet</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Multi Tweet</h2>
+    </div>
 <?=$response_msg?>
 Post the following tweet from all your Twitter accounts at once:<br />
 <form method="post" action="" name="quicktweet_form" id="quicktweet_form" onsubmit="ajax_multi_account_update('tab3','quicktweet_form'); return false;">
 <textarea name="tweet_content" id="tweet_content" class="input_box_style" style="height: 70px; width: 400px;" onkeyup="$('#count_box').val($('#tweet_content').val().length);"></textarea><br />
 Characters: <input type="text" name="count_box" id="count_box" size="3" value="0" class="input_box_style" style="width: 30px;"  />
-</div>
 <br style="clear: both;" />
 <input type="hidden" name="a" value="quicktweet" />
 </form>
 <input type="submit" value="Post Tweet" class="submit_button_style" onclick="ajax_multi_account_update('tab3','quicktweet_form');" />
+
+</div>
 <?php
    break;
   //End of switch
