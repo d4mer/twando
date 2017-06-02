@@ -29,7 +29,7 @@ http://www.twando.com/
             <br/><label class="col-md-3 control-label">Log actions from cron jobs?</label>
             <div class="col-md-6">
                 <div class="radio">
-                    <input <?php if ($q1a['log_data']) { echo 'checked="checked"'; } ?> type="checkbox" name="log_data" id="log_data" value="1" class="styled"/>
+                    <input <?php if ($q1a['log_data']) { echo 'checked="checked"'; } ?> type="checkbox" name="log_data" id="log_data" value="1" class="checkbox"/>
                     <input type="hidden" name="a" value="saveop" />
                 </div>
             </div>
@@ -149,21 +149,35 @@ if ($total_pages > 1) {
         <h2>Purge Log History</h2>
         <?=$response_msg?>
     </div>
-<form method="post" action="" name="log_purge_form" id="log_purge_form" onsubmit="ajax_log_settings_update('tab4','log_purge_form'); return false;">
-Delete&nbsp;&nbsp;<select name="log_type" id="log_type" class="btn btn-primary dropdown-toggle">
- <option value="0" selected="selected">all logs</option>
- <option value="1">follow logs</option>
- <option value="2">tweet logs</option>
-</select>&nbsp;&nbsp;for this account&nbsp;&nbsp;<select name="log_time" id="log_time" class="btn btn-primary dropdown-toggle">
- <option value="1" selected="selected">from the beginning</option>
- <option value="2">older than 30 days</option>
- <option value="3">older than 90 days</option>
-</select>
-<br />
-<input type="checkbox" name="empty_cache" id="empty_cache" value="1" class="checkbox"/> Empty user cache?<br />
-<input type="hidden" name="a" value="deletelogs" />
-</form>
-<input type="submit" value="Purge Logs" class="btn btn-primary" onclick="ajax_log_settings_update('tab4','log_purge_form');" />
+    <form method="post" class="form-horizontal" action="" name="log_purge_form" id="log_purge_form"
+          onsubmit="ajax_log_settings_update('tab4','log_purge_form'); return false;">
+        <div class="form-group">
+            <div class="col-md-9">
+               <label class="col-md-3 control-label">Delete&nbsp;&nbsp;</label>
+                <select name="log_type" id="log_type" class="btn btn-primary dropdown-toggle">
+                 <option value="0" selected="selected">all logs</option>
+                 <option value="1">follow logs</option>
+                 <option value="2">tweet logs</option>
+                </select>
+                <label class="control-label">&nbsp;&nbsp;for this account&nbsp;&nbsp;</label>
+                <select name="log_time" id="log_time" class="btn btn-primary dropdown-toggle">
+                 <option value="1" selected="selected">from the beginning</option>
+                 <option value="2">older than 30 days</option>
+                 <option value="3">older than 90 days</option>
+                </select>
+            </div>
+            <br />
+            <div class="col-md-9">
+                <label class="col-md-3 control-label">Empty user cache?</label>
+                <div class="radio">
+                    <br /><input type="checkbox" name="empty_cache" id="empty_cache" value="1" class="checkbox"/>
+                    <input type="hidden" name="a" value="deletelogs" />
+                </div>
+            </div>
+            <input type="submit" value="Purge Logs" class="btn btn-primary"
+                       onclick="ajax_log_settings_update('tab4','log_purge_form');" />
+        </div>
+    </form>
 </div>
 <?php
    break;
