@@ -16,15 +16,17 @@ http://www.twando.com/
             </div>
 
 <form method="post"  class="form-horizontal" action="" name="crossfollow_form" id="crossfollow_form" onsubmit="ajax_multi_account_update('tab1','crossfollow_form'); return false;">
-<select name="cross_op" id="cross_op" class="input_box_style" style="width: 95px;">
- <option value="1" selected="selected">Follow</option>
- <option value="2">Unfollow</option>
-</select>&nbsp;&nbsp;all your accounts from all your other accounts?<br />
-<input type="hidden" name="a" value="cross_go" />
-</form>
-<input type="submit" value="Cross Follow Accounts" class="submit_button_style" onclick="ajax_multi_account_update('tab1','crossfollow_form');" />
+    <div class="form-group">
+        <select name="cross_op" id="cross_op" class="btn btn-primary dropdown-toggle" style="width: 95px;">
+         <option value="1" selected="selected">Follow</option>
+         <option value="2">Unfollow</option>
+        </select>&nbsp;&nbsp;all your accounts from all your other accounts?<br />
+        <input type="hidden" name="a" value="cross_go" />
 
-</div>
+        <input type="submit" value="Cross Follow Accounts" class="submit_button_style" onclick="ajax_multi_account_update('tab1','crossfollow_form');" />
+
+    </div>
+</form>
 <?php
       break;
     case 'tab2':
@@ -35,7 +37,7 @@ http://www.twando.com/
     </div>
 <?=$response_msg?>
 <form method="post"  class="form-horizontal" action="" name="allfollow_form" id="allfollow_form" onsubmit="ajax_multi_account_update('tab2','allfollow_form'); return false;">
-<select name="cross_op" id="cross_op" class="input_box_style" style="width: 95px;">
+<select name="cross_op" id="cross_op" class="btn btn-primary dropdown-toggle" style="width: 95px;">
  <option value="1" selected="selected">Follow</option>
  <option value="2">Unfollow</option>
 </select>&nbsp;&nbsp;all the following&nbsp;&nbsp;<select name="cross_type" id="cross_type" class="input_box_style" style="width: 120px;">
@@ -58,7 +60,7 @@ http://www.twando.com/
 <?=$response_msg?>
 Post the following tweet from all your Twitter accounts at once:<br />
 <form method="post"  class="form-horizontal" action="" name="quicktweet_form" id="quicktweet_form" onsubmit="ajax_multi_account_update('tab3','quicktweet_form'); return false;">
-<textarea name="tweet_content" id="tweet_content" class="input_box_style" style="height: 70px; width: 400px;" onkeyup="$('#count_box').val($('#tweet_content').val().length);"></textarea><br />
+<textarea name="tweet_content" id="tweet_content" class="btn btn-primary dropdown-toggle" style="height: 70px; width: 400px;" onkeyup="$('#count_box').val($('#tweet_content').val().length);"></textarea><br />
 Characters: <input type="text" name="count_box" id="count_box" size="3" value="0" class="input_box_style" style="width: 30px;"  />
 <br style="clear: both;" />
 <input type="hidden" name="a" value="quicktweet" />
