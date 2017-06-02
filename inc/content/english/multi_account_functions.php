@@ -19,14 +19,16 @@ if ($db->num_rows($qcheck) < 2)  {
 } else {
 //List all options here
 ?>
-<div class="tab_row">
-<div class="tab_main" id="tab1">
- <a href="javascript:ajax_multi_account_tab('tab1');">Cross Follow Accounts</a>
-</div><div class="tab_main" id="tab2">
- <a href="javascript:ajax_multi_account_tab('tab2');">All Follow / Unfollow</a>
-</div><div class="tab_main" id="tab3">
- <a href="javascript:ajax_multi_account_tab('tab3');">Multi Tweet</a>
-</div>
+<div class="nav nav-tabs">
+    <li class="tab_main" id="tab1">
+        <a href="javascript:ajax_multi_account_tab('tab1');">Cross Follow Accounts</a>
+    </li>
+    <li class="tab_main" id="tab2">
+        <a href="javascript:ajax_multi_account_tab('tab2');">All Follow / Unfollow</a>
+    </li>
+    <li class="tab_main" id="tab3">
+        <a href="javascript:ajax_multi_account_tab('tab3');">Multi Tweet</a>
+    </li>
 </div>
 
 <br style="clear: both;" />
