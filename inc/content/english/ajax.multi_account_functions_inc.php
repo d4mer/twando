@@ -17,13 +17,15 @@ http://www.twando.com/
 
 <form method="post"  class="form-horizontal" action="" name="crossfollow_form" id="crossfollow_form" onsubmit="ajax_multi_account_update('tab1','crossfollow_form'); return false;">
     <div class="form-group">
-        <select name="cross_op" id="cross_op" class="btn btn-primary dropdown-toggle" style="width: 95px;">
-         <option value="1" selected="selected">Follow</option>
-         <option value="2">Unfollow</option>
-        </select>&nbsp;&nbsp;all your accounts from all your other accounts?<br />
-        <input type="hidden" name="a" value="cross_go" />
+        <div class="col-md-8">
+            <br />&nbsp;&nbsp;<select name="cross_op" id="cross_op" class="btn btn-primary dropdown-toggle" style="width: 95px;">
+             <option value="1" selected="selected">Follow</option>
+             <option value="2">Unfollow</option>
+            </select>&nbsp;&nbsp;all your accounts from all your other accounts?<br />
+            <input type="hidden" name="a" value="cross_go" />
+        </div>
 
-        <input type="submit" value="Cross Follow Accounts" class="btn btn-primary dropdown-toggle" onclick="ajax_multi_account_update('tab1','crossfollow_form');" />
+        <br /><input type="submit" value="Cross Follow Accounts" class="btn btn-primary dropdown-toggle" onclick="ajax_multi_account_update('tab1','crossfollow_form');" />
 
     </div>
 </form>
@@ -36,19 +38,25 @@ http://www.twando.com/
         <h2>All Follow / Unfollow</h2>
     </div>
 <?=$response_msg?>
-<form method="post"  class="form-horizontal" action="" name="allfollow_form" id="allfollow_form" onsubmit="ajax_multi_account_update('tab2','allfollow_form'); return false;">
-<select name="cross_op" id="cross_op" class="btn btn-primary dropdown-toggle" style="width: 95px;">
- <option value="1" selected="selected">Follow</option>
- <option value="2">Unfollow</option>
-</select>&nbsp;&nbsp;all the following&nbsp;&nbsp;<select name="cross_type" id="cross_type" class="btn btn-primary dropdown-toggle" style="width: 120px;">
- <option value="1" selected="selected">screen names</option>
- <option value="2">Twitter ids</option>
-</select>&nbsp;&nbsp;from all your Twitter accounts (enter one screen name / Twitter id per line):<br />
-<textarea name="twitter_ids_list" id="twitter_ids_list" class="form-control" style="height: 249px; margin: 6px 0px 0px 0px;"></textarea><br />
-<input type="hidden" name="a" value="allfollow_go" />
+<form method="post"  class="form-horizontal" action="" name="allfollow_form" id="allfollow_form"
+      onsubmit="ajax_multi_account_update('tab2','allfollow_form'); return false;">
+    <div class="col-md-12">
+        <br />&nbsp;&nbsp;<select name="cross_op" id="cross_op" class="btn btn-primary dropdown-toggle" style="width: 95px;">
+         <option value="1" selected="selected">Follow</option>
+         <option value="2">Unfollow</option>
+        </select>&nbsp;&nbsp;all the following&nbsp;&nbsp;<select name="cross_type" id="cross_type" class="btn btn-primary dropdown-toggle" style="width: 120px;">
+         <option value="1" selected="selected">screen names</option>
+         <option value="2">Twitter ids</option>
+        </select>&nbsp;&nbsp;from all your Twitter accounts (enter one screen name / Twitter id per line):<br />
+    </div>
 </form>
-<input type="submit" value="All Follow / Unfollow" class="btn btn-primary" onclick="ajax_multi_account_update('tab2','allfollow_form');" />
-</div>
+        <textarea name="twitter_ids_list" id="twitter_ids_list" class="form-control" style="height: 249px; margin: 6px 0px 0px 0px;"></textarea><br />
+
+        <input type="hidden" name="a" value="allfollow_go" />
+
+        <input type="submit" value="All Follow / Unfollow" class="btn btn-primary"
+               onclick="ajax_multi_account_update('tab2','allfollow_form');" />
+
 <?php
    break;
    case 'tab3':
