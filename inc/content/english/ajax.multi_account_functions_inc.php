@@ -15,7 +15,7 @@ http://www.twando.com/
 <?=$response_msg?>
             </div>
 
-<form method="post" action="" name="crossfollow_form" id="crossfollow_form" onsubmit="ajax_multi_account_update('tab1','crossfollow_form'); return false;">
+<form method="post"  class="form-horizontal" action="" name="crossfollow_form" id="crossfollow_form" onsubmit="ajax_multi_account_update('tab1','crossfollow_form'); return false;">
 <select name="cross_op" id="cross_op" class="input_box_style" style="width: 95px;">
  <option value="1" selected="selected">Follow</option>
  <option value="2">Unfollow</option>
