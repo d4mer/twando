@@ -34,7 +34,7 @@ http://www.twando.com/
         <h2>All Follow / Unfollow</h2>
     </div>
 <?=$response_msg?>
-<form method="post" action="" name="allfollow_form" id="allfollow_form" onsubmit="ajax_multi_account_update('tab2','allfollow_form'); return false;">
+<form method="post"  class="form-horizontal" action="" name="allfollow_form" id="allfollow_form" onsubmit="ajax_multi_account_update('tab2','allfollow_form'); return false;">
 <select name="cross_op" id="cross_op" class="input_box_style" style="width: 95px;">
  <option value="1" selected="selected">Follow</option>
  <option value="2">Unfollow</option>
@@ -57,7 +57,7 @@ http://www.twando.com/
     </div>
 <?=$response_msg?>
 Post the following tweet from all your Twitter accounts at once:<br />
-<form method="post" action="" name="quicktweet_form" id="quicktweet_form" onsubmit="ajax_multi_account_update('tab3','quicktweet_form'); return false;">
+<form method="post"  class="form-horizontal" action="" name="quicktweet_form" id="quicktweet_form" onsubmit="ajax_multi_account_update('tab3','quicktweet_form'); return false;">
 <textarea name="tweet_content" id="tweet_content" class="input_box_style" style="height: 70px; width: 400px;" onkeyup="$('#count_box').val($('#tweet_content').val().length);"></textarea><br />
 Characters: <input type="text" name="count_box" id="count_box" size="3" value="0" class="input_box_style" style="width: 30px;"  />
 <br style="clear: both;" />
